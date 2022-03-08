@@ -10,7 +10,7 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add('login', () => { 
+Cypress.Commands.add('login', () => {
   cy.visit('/login-form', {failOnStatusCode: false})
 
   const username = Cypress.env('username');
@@ -27,7 +27,7 @@ Cypress.Commands.add('login', () => {
   cy.contains('Log In').click()
 
   // Give a moment for the "too many logins" popup to appear
-  cy.wait(1000)
+  cy.wait(2000)
 
   // Check to see if the "too many logins" popup appears
   cy.get('body').then((body) => {
@@ -36,7 +36,15 @@ Cypress.Commands.add('login', () => {
       cy.get('.swal2-actions').contains('Continue').click()
     }
   })
+
+  cy.url().should('contain', 'dashboard')
 })
+
+const clear = Cypress.LocalStorage.clear
+
+// Disable clearing local storage
+Cypress.LocalStorage.clear = () => { }
+
 //
 //
 // -- This is a child command --

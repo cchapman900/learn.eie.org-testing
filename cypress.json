@@ -2,6 +2,8 @@
   "baseUrl": "https://learn.eie.org",
   "testFiles": [
     "lms/login.spec.js",
-    "lms/dashboard.spec.js"
+    "lms/dashboard.spec.js",
+    "lms/all-products.spec.js"
+
   ]
 }
