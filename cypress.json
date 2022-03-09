@@ -3,7 +3,8 @@
   "testFiles": [
     "lms/login.spec.js",
     "lms/dashboard.spec.js",
-    "lms/all-products.spec.js"
-
-  ]
+    "lms/all-products.spec.js",
+    "lms/maglev-unit.spec.js"
+  ],
+  "chromeWebSecurity": false
 }
