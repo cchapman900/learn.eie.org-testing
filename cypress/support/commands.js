@@ -13,8 +13,8 @@
 Cypress.Commands.add('login', () => {
   cy.visit('/login-form', {failOnStatusCode: false})
 
-  const username = Cypress.env('username');
-  const password = Cypress.env('password');
+  const username = Cypress.env('LMS_QA_USERNAME');
+  const password = Cypress.env('LMS_QA_PASSWORD');
   Cypress.log({
     name: 'loginByForm',
     message: `${username} | ${password}`,

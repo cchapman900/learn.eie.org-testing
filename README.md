@@ -25,7 +25,11 @@ git clone https://github.com/cchapman900/learn.eie.org-testing.git
 ```
 
 ### Install the packages 
-Run the following within the project directory
+Change into the project directory
+```
+cd learn.eie.org-testing
+```
+and run the following within the project directory
 ```
 npm install
 ```
