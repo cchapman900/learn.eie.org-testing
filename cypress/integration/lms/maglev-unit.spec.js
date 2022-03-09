@@ -52,7 +52,7 @@ describe('Loggin in', () => {
       getIframeBody().find('a').contains('English').first().invoke('attr', 'href').then((href) => {
         cy.request(href)
       });
-      cy.url().should('contain', 'lorforst-cdn.learn.eie.org')
+      // cy.url().should('contain', 'lorforst-cdn.learn.eie.org')
     })
   })
 })

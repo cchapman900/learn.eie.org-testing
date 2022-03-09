@@ -45,6 +45,13 @@ const clear = Cypress.LocalStorage.clear
 // Disable clearing local storage
 Cypress.LocalStorage.clear = () => { }
 
+// Temp: Try to make this work - CC
+// Cypress.Commands.overwrite('clearLocalStorage', (shouldClear=false) => {
+//   if (shouldClear) {
+//     localStorage.clear();
+//   }
+// })
+
 //
 //
 // -- This is a child command --

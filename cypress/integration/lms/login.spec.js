@@ -2,17 +2,21 @@
 
 describe('Loggin in', () => {
   context('Unauthorized', () => {
+    before(() => {
+      // cy.clearLocalStorage(true)
+      localStorage.clear()
+    })
     // we must have a valid session cookie to be logged
-    // it('is redirected on visit to /dashboard when no session', function () {
+    it('is redirected on visit to /dashboard when no session', function () {
 
-    //   cy.visit('/dashboard', {failOnStatusCode: false})
+      cy.visit('/dashboard', {failOnStatusCode: false})
 
-    //   cy.url().should('include', 'login-form')
-    // })
+      cy.url().should('include', 'login-form')
+    })
 
-    // it('shows the login screen', () => {
-    //   cy.get('[formcontrolname=username]').should('be.visible')
-    // })
+    it('shows the login screen', () => {
+      cy.get('[formcontrolname=username]').should('be.visible')
+    })
   })
 
   context('filling out login form with bad credentials', () => {
