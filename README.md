@@ -39,3 +39,12 @@ npm install
 The environment variables file is where sensitive information is stored which shouldn't be publicly available (such as in this git repo).
 
 Copy the `.env.example` file to `.env`, and get the necessary credentials from a team member.
+
+## Running tests
+
+### From the command line
+```
+npm run test
+```
+### From the GUI
+Cypress should be available as a regular application from which to run the tests you need.
